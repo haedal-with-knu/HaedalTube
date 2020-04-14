@@ -91,9 +91,9 @@
 >import turtle as t
 >
 >
->t.forward(100)
+>t.forward(50)
 >t.right((360 / 5) * 2)
->t.forward(100)
+>t.forward(50)
 >t.left(360 / 5)
 >```
 > <br> 위의 과정을 5번 반복해준다.
@@ -102,9 +102,9 @@
 >import turtle as t
 >
 >for i in range(5):
->    t.forward(100)
+>    t.forward(50)
 >    t.right((360 / 5) * 2)
->    t.forward(100)
+>    t.forward(50)
 >    t.left(360 / 5)
 >
 >t.done()
@@ -158,33 +158,33 @@
 >```python
 >import turtle as t
 >
->t.right(72)
+>t.right(72) #호_1
+>t.circle(25, 70) 
 >
->t.circle(25, 70) #호_1
->t.right(40)
+>t.right(40) #호_2
+>t.circle(45, 60) 
 >
->t.circle(45, 60) #호_2
->t.right(180)
->
->t.penup() #호_3
+>t.right(180) #호3
+>t.penup() 
 >t.circle(15, 320)
 >(x, y) = t.pos()
 >t.pendown()
 >t.circle(15, 40)
->t.goto(x, y)
+>
+>t.goto(x, y) #호_4
 >t.left(70)
->
->t.penup() #호_4
+>t.penup() 
 >t.circle(15, 320)
 >(x, y) = t.pos()
 >t.pendown()
 >t.circle(15, 40)
->t.goto(x, y)
->t.left(145)
 >
->t.circle(45, 60) #호_5
->t.right(40)
->t.circle(25, 60) #호_6
+>t.goto(x, y) #호_5
+>t.left(145)
+>t.circle(45, 60)
+>
+>t.right(40) #호_6
+>t.circle(25, 60) 
 >```
 >꽃잎 하나가 완성 되었습니다. 이를 적절히 오른쪽으로 134도 만큼 회전시켜 5번 반복하면 원하는 형태를 얻을 수 있습니다.
 >
@@ -196,7 +196,6 @@
 >t.right(72)
 >
 >for i in range(5):
->
 >    t.circle(25, 70)
 >    t.right(40)
 >    t.circle(45, 60)
@@ -218,7 +217,7 @@
 >    t.circle(45, 60)
 >    t.right(40)
 >    t.circle(25, 60)
->    (x, y) = t.pos()
+>
 >    t.goto(80*cos(a), 80*sin(a))
 >    t.right(134)
 >    a += 0.4*pi
