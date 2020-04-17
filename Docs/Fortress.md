@@ -13,7 +13,7 @@
 
 ## 포탄이 날아가는 궤적 파악
 
-![원 궤적](./python_fortress/fortress_arc_trace.png)
+![원 궤적](./python_fortress/fortress_circle_trace_.png)
 * 포탄이 날아가는 모양새는 썩 맘에들지 않는다.
 * 비교적 쉬운 코드로 작성이 가능하다
 
