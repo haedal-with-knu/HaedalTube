@@ -1,23 +1,23 @@
 # 포트리스
 파이썬을 활용해 포트리스를 만들어 보자
 
-![여기는 포트리스 실행 화면]()
+![여기는 포트리스 실행 화면](./python_fortress/python_fortress.gif)
 
 지난번 수업했던 [파이썬으로 경북대 로고 그리기](https://github.com/haedal-with-knu/HaedalTube/blob/master/Docs/Python%20turtle%20art.md)에서 사용한 `python turtle`을 활용해 간단한 포트리스를 만들어보겠습니다.  
 대전게임(?)을 만들고 싶었지만, 대포 1개만 넣어도 교육자료로썬 충분한 난이도일 듯 하여 대포 1개가 혼자서 쏘는 형태입니다.  
 
-![대포](Docs/python_fortress/cannon.jpg)
+![대포](./python_fortress/cannon.jpg)
 
 대포가 쏘는 포탄의 날아가는 궤적을 생각해보면 보통 포물선이겠지만,  
 `Turtle` 라이브러리로 코드를 짜는 것으로 한정한다면 쉬운 일이 아닙니다. 추후 도전해보실 만한 주제로 해당 문서 마지막에 정리해두겠습니다.
 
 ## 포탄이 날아가는 궤적 파악
 
-![원 궤적](Docs/python_fortress/fortress_arc_trace.png)
+![원 궤적](./python_fortress/fortress_arc_trace.png)
 * 포탄이 날아가는 모양새는 썩 맘에들지 않는다.
 * 비교적 쉬운 코드로 작성이 가능하다
 
-![포물선 궤적](Docs/python_fortress/fortress_arc_trace.png)
+![포물선 궤적](./python_fortress/fortress_arc_trace.png)
 * 상상했던 포탄이 날아가는 모습이 보인다.
 * 포탄의 궤적을 계산하기위해 많은 변수와 연산자들의 향연으로 코드가  복잡해진다
 
