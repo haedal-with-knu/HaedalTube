@@ -63,17 +63,22 @@ body{                          |선택자                 #body에 효과를 적
 ```html
 <html lang="en">
 <head>
-		<title>character_walking</title>
-		<link rel="stylesheet" href="CssAnimation.css">
+	<title>character_walking</title>
+	<link rel="stylesheet" href="CssAnimation.css">
 </head>
+</html>
 ```
 body 태그를 작성한다.
 ```html
+<html lang="en">
+<head>
+...
+</head>
 <body>
-  	<div id="runner"></div>
-		<div id="road"></div>
+	<div id="runner"></div>
+	<div id="road"></div>
 </body>
-</html>s
+</html>
 ```
 
 이제 css코드를 작성한다.
