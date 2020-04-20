@@ -21,33 +21,33 @@ HTML 문서에 CSS 스타일을 적용할 때에는 다음과 같이 세 가지 
 3.) 외부 스타일 시트(External style sheet)
 
     
-        외부 스타일 시트를 이용하는 방법은 웹 사이트 전체의 스타일을 하나의 파일에서 변경할 수 있도록 해줍니다.
-    
-        외부에 작성된 이러한 스타일 시트 파일은 .css 확장자를 사용하여 저장됩니다.
-    
-        스타일을 적용할 웹 페이지(html코드를 작성한 파일)의 <head>태그에 <link>태그를 사용하여 
-        외부 스타일 시트를 포함해야만 스타일이 적용됩니다.
+		외부 스타일 시트를 이용하는 방법은 웹 사이트 전체의 스타일을 하나의 파일에서 변경할 수 있도록 해줍니다.
+
+		외부에 작성된 이러한 스타일 시트 파일은 .css 확장자를 사용하여 저장됩니다.
+
+		스타일을 적용할 웹 페이지(html코드를 작성한 파일)의 <head>태그에 <link>태그를 사용하여 
+		외부 스타일 시트를 포함해야만 스타일이 적용됩니다.
     
 ### **2. CSS의 문법**
 
-        CSS는 선택자(selector)와 선언부(declaratives)로 구성됩니다.
+		CSS는 선택자(selector)와 선언부(declaratives)로 구성됩니다.
+		
+		
+		선택자는 CSS를 적용하고자(디자인 효과를 주고 싶은) 하는 HTML 요소(element)를 가리킵니다.
+		
+		
+		선언부는 중괄호{ }를 사용하여 전체를 둘러쌉니다.
         
-        
-        선택자는 CSS를 적용하고자(디자인 효과를 주고 싶은) 하는 HTML 요소(element)를 가리킵니다.
-        
-        
-        선언부는 중괄호{ }를 사용하여 전체를 둘러쌉니다.
-        
-            CSS는 특정한 기능을 하는들이 미리 정의되어 있으며, 이를 활용하여 태그의 스타일을 정의할 수 있습니다.
-        
-            각 선언은 CSS 속성명(property)과 속성값(value)을 가지며, 그 둘은 콜론(:)으로 연결됩니다.
-        
-            CSS 선언(declaration)은 마지막에 세미콜론(;)으로 끝마칩니다.
+		CSS는 특정한 기능을 하는들이 미리 정의되어 있으며, 이를 활용하여 태그의 스타일을 정의할 수 있습니다.
+
+		각 선언은 CSS 속성명(property)과 속성값(value)을 가지며, 그 둘은 콜론(:)으로 연결됩니다.
+
+		CSS 선언(declaration)은 마지막에 세미콜론(;)으로 끝마칩니다.
         
 ```html
-body{                                |선택자               #body에 효과를 적용한다.
-	background-color: orange;    |선언부{속성 : 값};    #배경색은 주황색으로 적용한다.
-        width:256px;                 |                     #너비는 256px로 적용한다.
+body{                          |선택자                 #body에 효과를 적용한다.
+	background-color: orange;    |선언부{속성 : 값};      #배경색은 주황색으로 적용한다.
+  width:256px;                 |                     #너비는 256px로 적용한다.
 	height:300px;                |                     #높이는 300px로 적용한다.
 }                                    
 ```
@@ -63,7 +63,7 @@ body{                                |선택자               #body에 효과를
 ```html
 <html lang="en">
 <head>
-    <title>character_walking</title>
+  <title>character_walking</title>
 	<link rel="stylesheet" href="CssAnimation.css">
 </head>
 ```
@@ -71,8 +71,8 @@ body 태그를 작성한다.
 ```html
 
 <body>
-        <div id="runner"></div>
-		<div id="road"></div>
+  <div id="runner"></div>
+	<div id="road"></div>
 </body>
 </html>
 
