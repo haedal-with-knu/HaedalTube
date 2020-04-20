@@ -45,7 +45,7 @@ CSS는 특정한 기능을 하는들이 미리 정의되어 있으며, 이를 �
 CSS 선언(declaration)은 마지막에 세미콜론(;)으로 끝마칩니다.
 ```		
 ```html
-body{                          |선택자                 #body에 효과를 적용한다.
+body{													|선택자                 #body에 효과를 적용한다.
 	background-color: orange;    |선언부{속성 : 값};      #배경색은 주황색으로 적용한다.
 	width:256px;                 |                     #너비는 256px로 적용한다.
 	height:300px;                |                     #높이는 300px로 적용한다.
