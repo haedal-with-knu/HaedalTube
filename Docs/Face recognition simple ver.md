@@ -5,6 +5,7 @@ OpenCV는 _Open Source Computer Vision_ 의 약자로 영상처리에 용이한 
 ## OpenCV-Python 설치  
 그럼 먼저 터미널에서 pip를 이용해 opencv를 설치합시다.  
 ```
+source venv/Scripts/activate
 pip install opencv-contrib-python  
 ```  
 ![img1](Face_recognition_image/img1.png)  
