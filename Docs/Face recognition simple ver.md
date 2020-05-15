@@ -7,16 +7,17 @@ OpenCV는 _Open Source Computer Vision_ 의 약자로 영상처리에 용이한 
 ```
 pip install opencv-contrib-python  
 ```  
-![img1]()  
+![img1](Face_recognition_image/img1.png)  
 위와 같은 오류가 난다면, 아래의 명령을 이용해 pip를 업그레이드 한 다음 다시 opencv 설치를 시도합니다.  
 ```
 easy_install -U pip
 ```  
-![img2]()  
-![img3]()  
+![img2](Face_recognition_image/img2.png)  
+  
+![img3](Face_recognition_image/img3.png)  
   
 pip list 명령어를 통해 잘 설치되었는지 다시 한번 확인해봅니다.  
-![img4]()  
+![img4](Face_recognition_image/img4.png)  
 잘 설치가 된 것을 확인할 수 있습니다. :)    
 
 ## 흐름
