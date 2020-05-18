@@ -5,19 +5,19 @@ OpenCV는 _Open Source Computer Vision_ 의 약자로 영상처리에 용이한 
 ## OpenCV-Python 설치  
 그럼 먼저 터미널에서 pip를 이용해 opencv를 설치합시다.  
 ```
-source venv/Scripts/activate
-pip install opencv-contrib-python  
+$ source venv/Scripts/activate
+$ pip install opencv-contrib-python  
 ```  
 ![img1](Face_recognition_image/img1.png)  
 위와 같은 오류가 난다면, 아래의 명령을 이용해 pip를 업그레이드 한 다음 다시 opencv 설치를 시도합니다.  
 ```
-easy_install -U pip
+$ easy_install -U pip
 ```  
 ![img2](Face_recognition_image/img2.png)  
   
 ![img3](Face_recognition_image/img3.png)  
   
-pip list 명령어를 통해 잘 설치되었는지 다시 한번 확인해봅니다.  
+`$ pip list` 명령어를 통해 잘 설치되었는지 다시 한번 확인해봅니다.  
 ![img4](Face_recognition_image/img4.png)  
 잘 설치가 된 것을 확인할 수 있습니다. :)    
 
@@ -51,6 +51,7 @@ import cv2
 
 그 다음 frontalface_trained_xmlFile 이라는 변수를 선언하고 타겟 모델이 있는 경로를 문자열로 저장합니다.  
 그리고 이를 이용해 얼굴 검출기를 하나 생성합니다
+`face.py`  
 ```python
 import cv2
 
