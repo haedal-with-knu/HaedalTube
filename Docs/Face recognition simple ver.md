@@ -50,7 +50,7 @@ import cv2
 ```   
 
 그 다음 frontalface_trained_xmlFile 이라는 변수를 선언하고 타겟 모델이 있는 경로를 문자열로 저장합니다.  
-그리고 이를 이용해 얼굴 검출기를 하나 생성합니다
+그리고 이를 이용해 얼굴 검출기를 하나 생성합니다  
 `face.py`  
 ```python
 import cv2

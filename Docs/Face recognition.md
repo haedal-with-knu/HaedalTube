@@ -18,53 +18,46 @@
 * Numpy는 행렬 연산 library이다.
 * 외부 패키지이므로 import 명령어를 통해 불러와야 한다.
 ```python
-    import numpy as np
+import numpy as np
 ```
 * numpy는 list 혹은 tuple을 데이터로 입력할 수 있다.
 
 
 --------------------------
 ## PIP (python package index)
-* pip은 python 패키지를 설치하고 관리하는 프로그램 이며,
+* pip은 python 패키지를 설치하고 관리하는 프로그램 이며, 명령어 pip을 통해 opencv , dlib, numpy 를 설치할 수 있습니다.  
+* 먼저, pycharm을 켜서 새로운 프로젝트를 생성해봅시다.  
 
-명령어 pip을 통해 opencv , dlib, numpy 를 설치할 수 있습니다.
+<img src="Face_recognition_image/project.PNG" height="300" width="600">  
 
-
-* 먼저, pycharm을 켜서 새로운 프로젝트를 생성해봅시다.
-
-<img src="Face_recognition_image/project.PNG" height="300" width="600">
-
-pycharm 하단에 있는 Terminal 버튼을 클릭해줍니다.
+pycharm 하단에 있는 Terminal 버튼을 클릭해줍니다.  
 
 <img src="Face_recognition_image/terminal.PNG" height="150" width="300" align="center">
 
-커서가 깜빡거리는게 보이시나요? 
+커서가 깜빡거리는게 보이시나요?   
  
 
-``pip install opencv-contrib-python``을 치면 pycharm에서 자동으로
-opencv가 설치가 됩니다.
-<img src="Face_recognition_image/opencv.PNG" height="200" width="400">
+`$ pip install opencv-contrib-python`을 치면 pycharm에서 자동으로
+opencv가 설치가 됩니다.  
+<img src="Face_recognition_image/opencv.PNG" height="200" width="400">  
 
-똑같은 방식으로 ``pip install numpy``를 입력해주세요.
-<img src="Face_recognition_image/numpy.png" height="200" width="400">
+똑같은 방식으로 `pip install numpy`를 입력해주세요.  
+<img src="Face_recognition_image/numpy.png" height="200" width="400">  
 
 
-1. dlib을 설치하기 전 python 3.x 64bit를 설치해주세요 . python이 32bit이면 `pip install dlib`할 때 오류가 뜬답니다. 
+1. dlib을 설치하기 전 python 3.x 64bit를 설치해주세요. python이 32bit이면 `pip install dlib`할 때 오류가 뜬답니다. 
 2. dlib을 사용하기 위해서는 우선 ```pip install cmake```를 입력해서 `cmake`를 설치해주세요.
 <br> dlib은  c++로 짜여진 언어이기 때문에 compiler가 필요합니다.  
 https://visualstudio.microsoft.com/ko/thank-you-downloading-visual-studio/?sku=Community&rel=16
+ 로 들어가서 visual studio를 깔아주세요.  
 
-로 들어가서 visual studio를 깔아주세요.
+visual studio installer에서 `c++를 사용한 데스크톱 개발`버튼을 클릭해서 설치해주세요.  
+<img src="Face_recognition_image/visual.png" height="301" width="600">  
 
-visual studio installer에서 `c++를 사용한 데스크톱 개발`버튼을 클릭해서 설치해주세요.
-
-
-<img src="Face_recognition_image/visual.png" height="301" width="600">
-
-설치를 완료 하셨으면 다시 pycharm으로 돌아가서 이전과 같이 terminal 창에서 `pip install dlib`을 해줍니다.
+설치를 완료 하셨으면 다시 pycharm으로 돌아가서 이전과 같이 terminal 창에서 `pip install dlib`을 해줍니다.  
 
 
-1단계를 완료했으니 이젠 python 코드를 작성해봅시다.
+1단계를 완료했으니 이젠 python 코드를 작성해봅시다.  
 
 # 2단계
 
@@ -73,7 +66,7 @@ visual studio installer에서 `c++를 사용한 데스크톱 개발`버튼을 �
 <img src="Face_recognition_image/new.png" height="200" width="400"><br><br>
 main.py 파일을 생성해주세요. <br>
 -----------------------
-이제 코드를 작성해봅시다.
+이제 코드를 작성해봅시다.  
 
 ```python
 import cv2,dlib,sys
@@ -113,9 +106,9 @@ while True:
     cv2.waitKey(1)            # 1ms만큼 대기한다는 뜻이며, 이걸 넣어야 동영상이 제대로 보입니다.
 ```
 
->terminal 창에서 `python main.py`를 실행시키면 동영상이 켜지는 것을 볼 수 있습니다.
+>terminal 창에서 `python main.py`를 실행시키면 동영상이 켜지는 것을 볼 수 있습니다.  
 
-<img src="Face_recognition_image/load.PNG" height="100" width="200">
+<img src="Face_recognition_image/load.PNG" height="100" width="200">  
 
 ## while 문 안에서 얼굴과 얼굴 특징점을 찾아봅시다.
 ```python
@@ -158,7 +151,7 @@ while True:
 
 --------------------------------------
 ## 라이언 얼굴을 띄워봅시다.
-1. while문 밖; predictor 밑에 줄에 추가해줍시다.
+1. while문 밖; predictor 밑에 줄에 추가해줍시다.  
 ```python
 overlay = cv2.imread('ryan_transparent', cv2.IMREAD_UNCHANGED)
 
@@ -190,11 +183,10 @@ def overlay_transparent(background_img, img_to_overlay_t, x, y, overlay_size=Non
   bg_img = cv2.cvtColor(bg_img, cv2.COLOR_BGRA2BGR)
 
   return bg_img
-
 ```
 
-2. while문 안
-center_x, center_y 앞뒤로 코드를 작성해줍니다.
+2. while문 안  
+center_x, center_y 앞뒤로 코드를 작성해줍니다.  
 ```python
 face_size =  int (max(bottom_right - top_left) *1.2 )
 
@@ -203,14 +195,14 @@ center_x, center_y = np.mean(shape_2d, axis=0).astype(np.int)
 result = overlay_transparent(ori,overlay, center_x +8 ,center_y -25 , overlay_size=(face_size, face_size))
 ```
 
-cv2.imshow() 함수를 이용하여 result를 띄워봅시다.
-맨밑에서 바로 윗줄에 추가해주세요.
+cv2.imshow() 함수를 이용하여 result를 띄워봅시다.  
+맨밑에서 바로 윗줄에 추가해주세요.  
 ```python
 cv2.imshow('result', result)   # 라이언 얼굴 띄우기
 ```
 
->`python main.py`를 입력하여 결과를 확인합니다.
-<img src="Face_recognition_image/ryan.png" height="100" width="200">
+>`python main.py`를 입력하여 결과를 확인합니다.  
+<img src="Face_recognition_image/ryan.png" height="100" width="200">  
 
 # 전체 소스 코드
 ```python
