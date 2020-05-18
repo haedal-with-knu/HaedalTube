@@ -68,6 +68,7 @@ main.py 파일을 생성해주세요. <br>
 -----------------------
 이제 코드를 작성해봅시다.  
 
+`main.py`  
 ```python
 import cv2,dlib,sys
 import numpy as np
@@ -93,16 +94,11 @@ predictor = dlib.shape_predictor('shape_predictor_68_face_landmarks.dat')
 while True:
 
     ret, img = cap.read()            #cap.read() : 동영상 파일에서 frame 단위로 읽어줍니다.
-
     if not ret:
         break
-    
     img = cv2.resize(img, (int(img.shape[1] * scaler), int(img.shape[0] * scaler)) )   # cv2.resize(img, dsize) : img를 dsize 크기로 조절해줍니다.
-    
     ori=img.copy()            # 원본이미지를 ori라는 이름으로 저장해봅시다.
-
     cv2.imshow('img',img)     #'img'라는 이름의 윈도우에 img를 띄울 수 있습니다.
-   
     cv2.waitKey(1)            # 1ms만큼 대기한다는 뜻이며, 이걸 넣어야 동영상이 제대로 보입니다.
 ```
 
@@ -204,7 +200,8 @@ cv2.imshow('result', result)   # 라이언 얼굴 띄우기
 >`python main.py`를 입력하여 결과를 확인합니다.  
 <img src="Face_recognition_image/ryan.png" height="100" width="200">  
 
-# 전체 소스 코드
+# 전체 소스 코드  
+`main.py`  
 ```python
 import cv2, dlib,sys
 import numpy as np
