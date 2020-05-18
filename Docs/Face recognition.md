@@ -1,20 +1,20 @@
 # 파이썬으로 얼굴 인식 심화
 
 # python을 이용한 얼굴인식
-### 1. opencv를 활용하자
-#### opencv는 Open Source Computer Vision 의 약자이다.
+### 1. `opencv`를 활용하자
+#### `opencv`는 Open Source Computer Vision 의 약자이다.
 
 * Open Source: 코드를 누구나 볼 수 있게 개방한 소스 
 * Computer Vision: 사람의 시각 체계의 기능을 컴퓨터로 구현하는 것.
 * 즉 opencv 는 사람의 눈을 대신한다고 생각하면 된다.
 
 
-### 2. dlib를 활용하자
+### 2. `dlib`를 활용하자
 
 * 프로그래밍 언어 C ++로 작성된 범용 크로스 플랫폼 소프트웨어 라이브러리 
 * Library: 컴퓨터 프로그램에서 자주 사용되는 부분 프로그램들을 모아 놓은 것.
 
-### 3. numpy를 활용하자
+### 3. `numpy`를 활용하자
 * Numpy는 행렬 연산 library이다.
 * 외부 패키지이므로 import 명령어를 통해 불러와야 한다.
 ```python
