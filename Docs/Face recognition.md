@@ -25,7 +25,7 @@ import numpy as np
 
 --------------------------
 ## PIP (python package index)
-* pip은 python 패키지를 설치하고 관리하는 프로그램 이며, 명령어 pip을 통해 opencv , dlib, numpy 를 설치할 수 있습니다.  
+* `pip`은 python 패키지를 설치하고 관리하는 프로그램 이며, 명령어 pip을 통해 opencv , dlib, numpy 를 설치할 수 있습니다.  
 * 먼저, pycharm을 켜서 새로운 프로젝트를 생성해봅시다.  
 
 <img src="Face_recognition_image/project.PNG" height="300" width="600">  

@@ -3,7 +3,7 @@
 OpenCV는 _Open Source Computer Vision_ 의 약자로 영상처리에 용이한 기능들이 포함되어 있는 오픈소스 라이브러리입니다.    
 
 ## OpenCV-Python 설치  
-그럼 먼저 터미널에서 pip를 이용해 opencv를 설치합시다.  
+그럼 먼저 터미널에서 `pip`를 이용해 `opencv`를 설치합시다.  
 ```
 $ source venv/Scripts/activate
 $ pip install opencv-contrib-python  
@@ -49,7 +49,7 @@ OpenCV는 cv2라는 이름으로 불러올 수 있습니다.
 import cv2
 ```   
 
-그 다음 frontalface_trained_xmlFile 이라는 변수를 선언하고 타겟 모델이 있는 경로를 문자열로 저장합니다.  
+그 다음 `frontalface_trained_xmlFile`이라는 변수를 선언하고 타겟 모델이 있는 경로를 문자열로 저장합니다.  
 그리고 이를 이용해 얼굴 검출기를 하나 생성합니다  
 `face.py`  
 ```python
@@ -69,7 +69,7 @@ face_detector = cv2.CascadeClassifier(frontalface_trained_xmlFile)
 # 저는 놋북 카메라가 하나라서 기본인 0으로 인자를 전달합니다.
 video = cv2.VideoCapture(0)
 ```  
-video 변수를 이용해 비디오를 캡처할 수 있습니다.  
+`video` 변수를 이용해 비디오를 캡처할 수 있습니다.  
   
 이제 남은 일은 키보드의 입력이 발생하기 전까지  
 반복문 내에서 비디오를 캡처하고,    
@@ -87,11 +87,11 @@ while True: #무한 반복
     #scaleFactor와 minNeightbors 는 알고리즘과 관련된 수치. 수정하면 성능에 변화가 생긴다. 자세한 설명은 생략
     faces = face_detector.detectMultiScale(cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY), scaleFactor=1.08, minNeighbors=4)
 ```  
-__video.read()__ 로 이미지를 캡처합니다. ret에는 성공 여부가, frame에는 캡처한 이미지가 담깁니다.  
-그 다음 __face_detector.detectMultiScale()__ 을 이용해 캡처한 이미지로부터 얼굴을 찾아내는데,  
-비올라 존스 알고리즘은 명암 영상을 바탕으로 작동하므로 __cv2.cvtColor()__를 이용해 이미지를 흑백으로 바꿉니다.  
-_scaleFactor_ 와 _minNeighbors_ 는 알고리즘과 관계가 있습니다. 이와 관련한 자세한 내용은 생략하겠습니다.   
-이렇게 찾아낸 얼굴들은 faces에 담깁니다.  
+`video.read()` 로 이미지를 캡처합니다. ret에는 성공 여부가, frame에는 캡처한 이미지가 담깁니다.  
+그 다음 `face_detector.detectMultiScale()` 을 이용해 캡처한 이미지로부터 얼굴을 찾아내는데,  
+비올라 존스 알고리즘은 명암 영상을 바탕으로 작동하므로 `cv2.cvtColor()`를 이용해 이미지를 흑백으로 바꿉니다.  
+`scaleFactor` 와 `minNeighbors` 는 알고리즘과 관계가 있습니다. 이와 관련한 자세한 내용은 생략하겠습니다.   
+이렇게 찾아낸 얼굴들은 `faces`에 담깁니다.  
   
 ```python
     #찾은 얼굴 각각의 좌표를 이용해 사각형으로 표시 -> cv2.rectangle
@@ -111,10 +111,10 @@ _scaleFactor_ 와 _minNeighbors_ 는 알고리즘과 관계가 있습니다. 이
 video.release() #비디오 캡처 객체 해제
 cv2.destroyAllWindows() # 창 닫기
 ```
-찾아낸 얼굴들에 대한 정보를 x, y, w, h 각 변수에 담아 __cv2.rectangle()__ 함수로 사각형으로 이미지에 표시합니다.  
-그리고 __cv2.putText()__ 함수로 찾아낸 얼굴임을 표시합니다.  
-마지막으로 __cv2.imshow()__ 함수로 합성한 이미지를 최종적으로 송출합니다.  
-__cv2.waitKey()__ 와 조건문을 활용해 키보드의 입력을 받을 시 반복문을 빠져나가도록 합니다.  
+찾아낸 얼굴들에 대한 정보를 x, y, w, h 각 변수에 담아 `cv2.rectangle()` 함수로 사각형으로 이미지에 표시합니다.  
+그리고 `cv2.putText()` 함수로 찾아낸 얼굴임을 표시합니다.  
+마지막으로 `cv2.imshow()` 함수로 합성한 이미지를 최종적으로 송출합니다.  
+`cv2.waitKey()` 와 조건문을 활용해 키보드의 입력을 받을 시 반복문을 빠져나가도록 합니다.  
 
 반복문을 빠져나가면 비디오 캡처 객체를 해제하고 모든 창을 닫습니다.   
 
